@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <link
+      rel="stylesheet"
+      href="style.css" />
+   
+  </head>
+  <body>
+    <main>
+      <section class="main-section">
+        <h1 class="section-title text-heading">Contact Us</h1>
+        <form class="contact-form" aria-labelledby="form-title">
+          <div class="form-body">
+            <div>
+            <div class="text-input-wrapper text-input-name">
+              <label
+                class="label body-sm"
+                for="txt-first-name">First Name</label>
+              <input
+                type="text"
+                name="first-name"
+                id="txt-first-name"
+                autocomplete="given-name"
+                aria-describedby="first-name-error"
+                aria-invalid="false"
+                 />
+            </div>
+            <div
+            class="input-error-wrapper"
+            id="first-name-error"
+            data-active="false">
+            This field is required
+          </div>
+        </div>
+        <div>
+            <div class="text-input-wrapper text-input-name">
+              <label
+                class="label body-sm"
+                for="txt-last-name">Last Name</label>
+              <input
+                type="text"
+                name="last-name"
+                id="txt-last-name"
+                autocomplete="family-name"
+                aria-describedby="last-name-error"
+                aria-invalid="false"
+                required />
+            </div>
+            <div
+            class="input-error-wrapper"
+            id="last-name-error"
+            data-active="false">
+            <p class="input-error">This field is required</p>
+          </div>
+        </div>
+            <div class="text-input-wrapper text-input-email">
+              <label
+                class="label body-sm"
+                for="input-email">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                id="input-email"
+                aria-describedby="email-error"
+                aria-invalid="false"
+                required />
+            </div>
+            <div
+            class="input-error-wrapper"
+            id="email-error"
+            data-active="false">
+            <p class="input-error">Please enter a valid email address</p>
+          </div>
+            <fieldset class="query-type-fieldset">
+              <legend class="label body-sm">Query Type</legend>
+
+              <div class="radio-wrapper">
+                <label
+                  class="radio-input-wrapper"
+                  for="rdo-general-enquiry">
+                  <input
+                    type="radio"
+                    name="query-type"
+                    id="rdo-general-enquiry"
+                    required />
+                  <span class="radio-button"></span>
+                  <span>General Enquiry</span>
+                </label>
+              </div>
+
+              <div class="radio-wrapper">
+                <label
+                  class="radio-input-wrapper"
+                  for="rdo-support-request">
+                  <input
+                    type="radio"
+                    name="query-type"
+                    id="rdo-support-request" />
+                  <span class="radio-button"></span>
+                  <span>Support Request</span>
+                </label>
+              </div>
+
+              <div
+                class="input-error-wrapper"
+                id="query-type-error"
+                data-active="false">
+                <p class="input-error">Please select a query type</p>
+              </div>
+            </fieldset>
+            <div class="message-wrapper ">
+              <label
+                class="label body-sm"
+                for="txt-message">Message</label>
+              <textarea
+                name="message"
+                id="txt-message"
+                aria-describedby="message-error"
+               class="w-100"
+                required></textarea>
+             
+            </div>
+            <div
+            class="input-error-wrapper"
+            id="message-error"
+            data-active="false">
+            <p class="input-error">This field is required</p>
+          </div>
+        </div>
+
+          <div class="consent-check-wrapper">
+            <label class="checkbox-wrapper">
+              <input
+                type="checkbox"
+                name="consent-check"
+                id="chk-consent"
+                aria-describedby="consent-error"
+                required />
+              I consent to being contacted by the team
+              <span class="checkmark"></span>
+            </label>
+            <div
+              class="input-error-wrapper"
+              id="consent-error"
+              data-active="false">
+              <p class="input-error">
+                To submit this form, please consent to being contacted
+              </p>
+            </div>
+          </div>
+
+          <button
+            class="button body-md text-bold"
+            id="btn-contact-form-submit"
+            type="submit" onclick="submitDataFun()">
+            Submit
+          </button>
+        </form>
+      </section>
+
+      <section
+        class="success-message"
+        id="success-message"
+        aria-live="polite">
+        <div class="success-message-wrapper">
+          <div class="success-message-title">
+            <picture class="success-message-picture">
+              <img
+                src="./assets/images/icon-success-check.svg"
+                alt="Success icon" />
+            </picture>
+            <h3>Message Sent!</h3>
+          </div>
+          <div class="form-submitted-message-wrapper">
+            <p class="form-submitted-message">
+              Thanks for completing the form. We'll be in touch soon!
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
